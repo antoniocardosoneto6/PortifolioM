@@ -1,0 +1,408 @@
+/* =========================
+   Configurações Globais
+   ========================= */
+   :root {
+    --primary-bg-color: rgb(189, 186, 163);
+    --secondary-color: rgb(107, 75, 23);
+    --accent-color: rgb(15, 15, 15);
+    --hover-color: rgb(129, 19, 219);
+    --text-color: black;
+    --font-family-primary: Arial, sans-serif;
+    --font-family-secondary: 'Playwrite CU', cursive;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    margin: 0;
+    font-family: var(--font-family-primary);
+    color: var(--text-color);
+}
+
+/* =========================
+   Header e Menu de Navegação
+   ========================= */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary-bg-color);
+    z-index: 9999;
+    height: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+}
+
+.banner img {
+    width: 200px;
+    height: auto;
+}
+
+.menu ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--hover-color);
+    transform: scale(1.1);
+}
+
+.contact-btn img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.contact-btn img:hover {
+    transform: scale(1.2);
+}
+
+/* =========================
+   Seção Perfil
+   ========================= */
+.perfil-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 20px 50px;
+}
+
+.perfil-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.perfil-text {
+    max-width: 600px;
+}
+
+.perfil-text h1 {
+    font-size: 36px;
+    color: var(--accent-color);
+}
+
+.perfil-text p {
+    font-family: var(--font-family-secondary);
+    line-height: 1.5;
+}
+
+.btn-github button {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-bg-color);
+    background-color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-github button:hover {
+    box-shadow: 0px 0px 8px var(--hover-color), inset 0px 0px 8px var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.perfil-img img {
+    width: 300px;
+    border-radius: 50%;
+    animation: flutuar 3s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+/* =========================
+   Seções Gerais
+   ========================= */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-family: fantasy;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card i {
+    font-size: 50px;
+    color: var(--text-color);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.4;
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-bg-color);
+    color: white;
+    font-size: 14px;
+}
+
+/* =========================
+   Responsividade
+   ========================= *//* =========================
+   Header - Estilo Geral
+   ========================= */
+header {
+    background-color: rgb(227, 228, 207); /* Cor de fundo */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   Menu de Navegação
+   ========================= */
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(107, 75, 23);
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item:hover {
+    color: rgb(221, 218, 15);
+    transform: scale(1.1);
+}
+
+/* =========================
+   Botão de Contato
+   ========================= */
+.contact-btn img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-btn img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   Responsividade
+   ========================= */
+@media (max-width: 768px) {
+    .banner {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu-item {
+        font-size: 18px;
+    }
+
+    .contact-btn img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item {
+        font-size: 16px;
+    }
+
+    .contact-btn img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+}
+/* =========================
+   Responsividade
+   ========================= */
+
+/* Ajustes gerais para telas menores */
+@media (max-width: 992px) {
+    .perfil-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .perfil-text {
+        max-width: 100%;
+    }
+
+    .perfil-img img {
+        width: 250px; /* Reduz o tamanho da imagem */
+    }
+
+    .cards-container {
+        gap: 20px;
+    }
+
+    .card {
+        width: calc(50% - 20px); /* Divide os cards em duas colunas */
+    }
+}
+
+/* Ajustes específicos para telas médias (tablets) */
+@media (max-width: 768px) {
+    .perfil-text h1 {
+        font-size: 28px;
+    }
+
+    .perfil-text p {
+        font-size: 16px;
+    }
+
+    .perfil-img img {
+        width: 200px; /* Reduz ainda mais a imagem */
+    }
+
+    .cards-container {
+        flex-direction: column; /* Cards em coluna */
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Ajustes específicos para telas pequenas (celulares) */
+@media (max-width: 480px) {
+    .perfil-text h1 {
+        font-size: 24px;
+    }
+
+    .perfil-text p {
+        font-size: 14px;
+    }
+
+    .perfil-img img {
+        width: 180px;
+    }
+
+    .about-section p,
+    .experience-section p {
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+}
+
